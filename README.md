@@ -32,9 +32,9 @@ Finally, add three environment variables to the container. You're encouraged to 
 
 ```yml
 environment:
-	POSTGRES_USER: pa7
-	POSTGRES_PASSWORD: pa7password
-	PGDATA: /data
+    POSTGRES_USER: pa7
+    POSTGRES_PASSWORD: pa7password
+    PGDATA: /data
 ```
 
 
@@ -49,8 +49,8 @@ Finally, add two environment variables to the container. You're encouraged to re
 
 ```yml
 environment:
-	PGADMIN_DEFAULT_EMAIL: pa7@pa7.se
-	PGADMIN_DEFAULT_PASSWORD: pa7password
+    PGADMIN_DEFAULT_EMAIL: pa7@pa7.se
+    PGADMIN_DEFAULT_PASSWORD: pa7password
 ```
 
 
