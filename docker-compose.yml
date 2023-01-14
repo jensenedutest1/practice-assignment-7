@@ -1,0 +1,21 @@
+services:
+    my-ubuntu:
+        image: ubuntu:kinetic
+        command: bash -c "echo hello && tail -f /dev/null"
+    my-postgres:
+        image: postgres
+        volumes:
+            - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+            - ./data:/data
+        environment:
+            POSTGRES_USER: pa7
+            POSTGRES_PASSWORD: pa7password
+            PGDATA: /data
+    my-pgadmin:
+        image: dpage/pgadmin4
+        ports:
+            - 5051:80
+        restart: unless-stopped
+        environment:
+            PGADMIN_DEFAULT_EMAIL: pa7@pa7.se
+            PGADMIN_DEFAULT_PASSWORD: pa7password
