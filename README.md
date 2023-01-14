@@ -1,8 +1,12 @@
+# Creating Docker container group
+
 Create a docker-compose file with three services (containers). Name them `my-ubuntu`, `my-postgres`, and `my-pgadmin`.
 
 
 
-### my-ubuntu
+<br/>
+
+## my-ubuntu
 The first one, `my-ubuntu`, should start from the image `ubuntu`, tag `kinetic` (reminder: the Docker notation for that is `ubuntu:kinetic`).
 
 It should run the following command once it's started:
@@ -15,8 +19,9 @@ There is no need to expose any ports or mount and volumes for this container.
 
 This container will just be an Ubuntu container that does nothing in particular.
 
+<br/>
 
-### my-postgres
+## my-postgres
 The second one, `my-postgres`, should start from the image `postgres`.
 
 Mount two volumes:
@@ -38,7 +43,9 @@ environment:
 ```
 
 
-### my-pgadmin
+<br/>
+
+## my-pgadmin
 The third one, `my-pgadmin`, should start from the image `dpage/pgadmin4`.
 
 Create a port mapping for `5051` on the host and `80` in the container.
@@ -53,11 +60,13 @@ environment:
     PGADMIN_DEFAULT_PASSWORD: pa7password
 ```
 
+<br/>
 
 ---
 
+<br/><br/>
 
-Once you've properly written the docker-file, just running `docker compose up` will create the three containers and they will run on their own.
+Once you've properly written the docker-compose file, just running `docker compose up` will create the three containers and they will run on their own.
 
 The `my-ubuntu` container doesn't serve or do anything useful.
 
